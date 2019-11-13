@@ -1,0 +1,14 @@
+<h2>Fruits Call rest Service</h2>
+
+<div *ngFor="let fruit of fruits$">
+  <h3>
+      <a [title]="fruit.name + ' details'" [routerLink]="['/fruits', fruitId]">
+        {{ fruit.name }}
+      </a>
+  </h3>
+
+</div>
+
+
+
+
