@@ -15,7 +15,6 @@ export class ProductDetailsComponent implements OnInit {
   product;
   
   constructor(  private route: ActivatedRoute,  private cartService: CartService) { }
-
   
   // https://www.c-sharpcorner.com/article/using-parammap-observable-for-handling-route-in-angular/
   ngOnInit() {
@@ -23,13 +22,10 @@ export class ProductDetailsComponent implements OnInit {
        this.product = products[+params.get('productId')];
       });
    }
-
    
    addToCart(product) {
      window.alert('Your product has been added to the cart!');
      this.cartService.addToCart(product);
    }
-   
-
 
 }

@@ -16,4 +16,13 @@ export class FruitService {
     return this.http.get('https://my-json-server.typicode.com/solblog/food/fruits');
   }
 
+  getFruit(id) {
+    // return this.http.get('http://jsonplaceholder.typicode.com/users')
+    // return this.http.get('http://localhost:3000/fruits')
+    // return this.http.get('http://localhost:3001/fruits')
+    
+    alert('https://my-json-server.typicode.com/solblog/food/fruits/'+Number(id));
+    return this.http.get('https://my-json-server.typicode.com/solblog/food/fruits/'+Number(id));
+  }
+
 }

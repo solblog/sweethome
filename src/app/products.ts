@@ -1,26 +1,26 @@
 export const products = [
   {
     id: 1,
-    name: 'Apple',
-    price: 1.5,
-    description: 'A Sweet fruit that many people eat in Belgium'
+    name: 'IPhone',
+    price: 800,
+    description: 'Most expensive Phone in the market'
   },
   {
     id: 2,
-    name: 'Orange',
-    price: 2,
-    description: 'Coming from spain to make juice mainly'
+    name: 'Samsung',
+    price: 500,
+    description: 'Competition of Iphone in prices'
   },
   {
     id: 3,
-    name: 'Peer',
-    price: 750,
-    description: ''
+    name: 'Xiaomi',
+    price: 250,
+    description: 'Cheap phones but not reliable'
   },
   {
     id: 4,
-    name: 'Mango',
-    price: 800,
+    name: 'Huawei',
+    price: 150,
     description: ''
   }
 ];

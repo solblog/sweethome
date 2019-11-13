@@ -10,8 +10,14 @@ export class CartService {
 
   }
 
+  /* it should be an interface */
+
   addToCart(product) {
     this.items.push(product);
+  }
+
+  addFruitToCart(fruit) {
+    this.items.push(fruit);
   }
 
   getItems() {
