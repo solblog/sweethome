@@ -16,10 +16,6 @@ export class CartService {
     this.items.push(product);
   }
 
-  addFruitToCart(fruit) {
-    this.items.push(fruit);
-  }
-
   getItems() {
     return this.items;
   }
@@ -28,5 +24,12 @@ export class CartService {
     this.items = [];
     return this.items;
   }
+
+  /*
+  addFruitToCart(fruit) {
+    this.items.push(fruit);
+  }
+  */
+
   
 }

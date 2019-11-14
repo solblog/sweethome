@@ -9,6 +9,7 @@ import { Output, EventEmitter } from '@angular/core';
 })
 export class ProductAlertsComponent implements OnInit {
  @Input() product;
+ // Output because launch events ???
  @Output() notify =  new EventEmitter();
 
   constructor() { }

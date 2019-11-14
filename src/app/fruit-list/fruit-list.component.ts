@@ -17,13 +17,15 @@ export class FruitListComponent implements OnInit {
   
   constructor(private dataService: FruitService) {
 
-   }
+  }
 
   ngOnInit() {
 
     this.dataService.getFruits().subscribe(
-      data=> this.fruits$ = data
-      // data => this.fruits$ = data
+      data=> {
+        this.fruits$ = data
+        alert(JSON.stringify(data));
+      }
     );
 
   }

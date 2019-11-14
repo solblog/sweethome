@@ -1,5 +1,21 @@
 <h3>Cart</h3>
 
+<div style="border:1px; width: 800px;">
+  https://angular.io/start/data
+  <strong>Managind data</strong>
+  Use of services:
+   In this component we are going display the elements added from the products.json file in our file system
+  to a local array in this elemment. In order to do it user has to click on the add button, added in the product details
+  component. 
+   In order to do it we need to use a service to exchange information between components.
+   <ul>
+     <li>Define a cart service</li>
+     <li>Use the cart service</li>
+     <li>Create the cart service (Setup the component)</li>
+     <li>Display the car items</li>
+   </ul>
+</div>
+
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }}</span>
   <span>{{ item.price | currency }}</span>

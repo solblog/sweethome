@@ -11,19 +11,31 @@ import { FruitService } from '../fruit.service';
 export class FruitDetailsComponent implements OnInit {
 
   fruit$: Object;
+  fruitId$: Object;
 
-  constructor(private route: ActivatedRoute,private data: FruitService){
+  constructor(private route: ActivatedRoute,private dataService: FruitService){
     
-    this.route.params.subscribe( params => this.fruit$ = params.fruitId );
+    console.log('Testing console');
+    // this.route.params.subscribe( params => {console.log(params)} );
+    this.route.params.subscribe( params => this.fruitId$ = params.fruitId );
 
   }
 
   ngOnInit() {
     
-    this.data.getFruit(this.fruit$).subscribe(
-      data => this.fruit$ = data
+    this.dataService.getFruit(this.fruitId$).subscribe(
+      data => {
+        alert('Call the function');
+        this.fruit$ = data
+        this.share();
+      }
     );
-
+    
+  } 
+    
+  share() {
+    alert('something');
+    window.alert(JSON.stringify(this.fruit$));
   }
 
 }
