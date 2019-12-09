@@ -25,16 +25,16 @@ export class FruitDetailsComponent implements OnInit {
     
     this.dataService.getFruit(this.fruitId$).subscribe(
       data => {
-        alert('Call the function');
+        // alert('Call the function');
         this.fruit$ = data
-        this.share();
+        // this.share();
       }
     );
     
   } 
     
   share() {
-    alert('something');
+    // alert('something');
     window.alert(JSON.stringify(this.fruit$));
   }
 

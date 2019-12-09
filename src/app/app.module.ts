@@ -2,7 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+/*
+ Retrive shipping prices - Enable http client
+*/
 import { HttpClientModule } from '@angular/common/http';
+
+/* Imports from our app */
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -12,6 +17,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartComponent } from './cart/cart.component';
 import { FruitListComponent } from './fruit-list/fruit-list.component';
 import { FruitDetailsComponent } from './fruit-details/fruit-details.component';
+import { ShippingComponent } from './shipping/shipping.component';
 
 
 @NgModule({
@@ -25,6 +31,7 @@ import { FruitDetailsComponent } from './fruit-details/fruit-details.component';
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
       { path: 'fruits/:fruitId', component: FruitDetailsComponent },
+      { path: 'shipping', component: ShippingComponent },
     ])
   ],
   declarations: [
@@ -35,7 +42,8 @@ import { FruitDetailsComponent } from './fruit-details/fruit-details.component';
     ProductDetailsComponent,
     CartComponent,
     FruitListComponent,
-    FruitDetailsComponent
+    FruitDetailsComponent,
+    ShippingComponent
   ],
   bootstrap: [ AppComponent ]
 })

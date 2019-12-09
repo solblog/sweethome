@@ -24,7 +24,7 @@ export class FruitListComponent implements OnInit {
     this.dataService.getFruits().subscribe(
       data=> {
         this.fruits$ = data
-        alert(JSON.stringify(data));
+        // alert(JSON.stringify(data));
       }
     );
 

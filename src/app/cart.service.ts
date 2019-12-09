@@ -1,4 +1,8 @@
 import { Injectable } from '@angular/core';
+/*
+ Enable HttpClient for cart service
+*/
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -6,8 +10,7 @@ import { Injectable } from '@angular/core';
 export class CartService {
   items = [];
 
-  constructor() { 
-
+  constructor(private http: HttpClient) { 
   }
 
   /* it should be an interface */
@@ -25,11 +28,14 @@ export class CartService {
     return this.items;
   }
 
+  getShippingPrices() {
+    return this.http.get('/assets/shipping.json');
+  }
+
   /*
   addFruitToCart(fruit) {
     this.items.push(fruit);
   }
   */
 
-  
 }
